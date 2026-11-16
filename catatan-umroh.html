@@ -227,6 +227,17 @@ section { padding-block: 40px 8px; scroll-margin-top: 64px; }
 .poses circle { fill: var(--accent); }
 .poses .gnd { stroke: var(--line); stroke-width: 2; }
 .poses .fine { stroke-width: 2.5; stroke: var(--gold); }
+.phr { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.phr { gap: 8px; }
+.phr > div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: center; min-width: 0; break-inside: avoid; }
+.phr .l, .phr .m { grid-column: 1; }
+.phr .a { grid-column: 2; grid-row: 1 / span 2; font-family: var(--font-ar); direction: rtl; text-align: right; font-size: calc(1.45rem * var(--ar-scale)); line-height: 1.6; max-width: 55vw; }
+.phr .l { font-style: italic; color: var(--accent); font-size: 0.92rem; font-weight: 600; }
+.phr .m { font-size: 0.88rem; }
+.digits { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; text-align: center; }
+.digits div { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 0; }
+.digits .a { font-family: var(--font-ar); font-size: calc(1.5rem * var(--ar-scale)); line-height: 1.4; }
+.digits .n { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 @media print {
   nav.toc, .counter, .progress button, .toast, .size-ctl, body::before { display: none !important; }
   section { padding-block: 16px 4px; }
@@ -266,6 +277,7 @@ html { scroll-behavior: smooth; }
     <ul>
       <li><a href="#manasik">Tata Cara Umroh</a></li>
       <li><a href="#hotel">Hotel &amp; Kontak</a></li>
+      <li><a href="#arab">Bahasa Arab</a></li>
       <li><a href="#jadwal">Jadwal</a></li>
       <li><a href="#doa-harian">Doa Lain</a></li>
       <li><a href="#adab">Do &amp; Don'ts</a></li>
@@ -641,6 +653,80 @@ html { scroll-behavior: smooth; }
       <div class="field"><label for="titipan">Nama dan hajat yang dititipkan</label><textarea id="titipan" data-keep placeholder="Ibu: sehat dan panjang umur&#10;Adik: lulus kuliah&#10;..."></textarea></div>
       <p class="saved" style="margin-top:6px">Bacakan saat sujud, di Shafa dan Marwah, saat minum zamzam, waktu sahur, di Multazam, dan di Raudhah (tempat mulia untuk sholat dan berdoa).</p>
     </div>
+  </div>
+</section>
+
+<!-- ================= ARAB ================= -->
+<section id="arab">
+  <div class="sec-head">
+    <div class="ar">كَلِمَاتٌ مُفِيْدَةٌ</div>
+    <h2>Bahasa Arab praktis</h2>
+    <p>Kata yang sering diucapkan askar dan petugas, dan kalimat pendek untuk bertanya. Sebagian memakai logat Saudi sehari-hari, bukan bahasa Arab baku.</p>
+  </div>
+  <div class="stack">
+    <h3 class="sub-h">Yang sering diucapkan askar</h3>
+    <div class="phr">
+      <div><span class="a">حَاجّ / حَاجَّة</span><span class="l">Ḥājj / Ḥājjah</span><span class="m">Sebutan untuk jamaah pria / wanita (“Pak Haji”, “Bu Hajjah”)</span></div>
+      <div><span class="a">طَرِيْقْ</span><span class="l">Ṭarīq!</span><span class="m">Minggir, beri jalan</span></div>
+      <div><span class="a">يَلَّا</span><span class="l">Yallā</span><span class="m">Ayo, jalan terus</span></div>
+      <div><span class="a">اِمْشِ</span><span class="l">Imsyi</span><span class="m">Jalan! Jangan berhenti di sini</span></div>
+      <div><span class="a">مَمْنُوْعْ</span><span class="l">Mamnū‘</span><span class="m">Dilarang</span></div>
+      <div><span class="a">مَا فِيْ</span><span class="l">Mā fī</span><span class="m">Tidak ada / tidak bisa</span></div>
+      <div><span class="a">مَلْيَانْ</span><span class="l">Malyān</span><span class="m">Penuh (area atau pintu sudah penuh)</span></div>
+      <div><span class="a">مَقْفُوْلْ / مُغْلَقْ</span><span class="l">Maqfūl / Mughlaq</span><span class="m">Tutup</span></div>
+      <div><span class="a">سِيْدَا</span><span class="l">Sīdā</span><span class="m">Lurus terus</span></div>
+      <div><span class="a">يَمِيْنْ / يَسَارْ</span><span class="l">Yamīn / Yasār</span><span class="m">Kanan / kiri</span></div>
+      <div><span class="a">اِرْجَعْ</span><span class="l">Irja‘</span><span class="m">Kembali, mundur</span></div>
+      <div><span class="a">وَقِّفْ / قِفْ</span><span class="l">Waqqif / Qif</span><span class="m">Berhenti</span></div>
+      <div><span class="a">تَعَالْ / رُوْحْ</span><span class="l">Ta‘āl / Rūḥ</span><span class="m">Sini / pergi sana</span></div>
+      <div><span class="a">هِنَا / هِنَاكْ</span><span class="l">Hinā / Hināk</span><span class="m">Di sini / di sana</span></div>
+      <div><span class="a">بِسُرْعَةْ / شْوَيَّةْ</span><span class="l">Bisur‘ah / Syuwayyah</span><span class="m">Cepat / pelan-pelan, sebentar</span></div>
+      <div><span class="a">لَا تْصَوِّرْ</span><span class="l">Lā tṣawwir</span><span class="m">Jangan memotret</span></div>
+      <div><span class="a">لِلنِّسَاءِ / لِلرِّجَالِ</span><span class="l">Lin-nisā' / Lir-rijāl</span><span class="m">Khusus wanita / khusus pria</span></div>
+      <div><span class="a">خَلَاصْ</span><span class="l">Khalāṣ</span><span class="m">Sudah, selesai, cukup</span></div>
+    </div>
+    <div class="note"><b>Tips:</b> jika askar berkata “Ḥājj, ṭarīq!” atau “yallā”, turuti dan jangan berdebat. Mereka mengatur arus jutaan orang. Banyak askar juga paham beberapa kata Indonesia atau Inggris.</div>
+
+    <h3 class="sub-h">Kalimat untuk Anda ucapkan</h3>
+    <div class="phr">
+      <div><span class="a">اَلسَّلَامُ عَلَيْكُمْ</span><span class="l">Assalāmu ‘alaikum</span><span class="m">Salam pembuka sebelum bertanya</span></div>
+      <div><span class="a">لَوْ سَمَحْتْ</span><span class="l">Law samaḥt</span><span class="m">Permisi / tolong (sopan)</span></div>
+      <div><span class="a">شُكْرًا / جَزَاكَ اللّٰهُ خَيْرًا</span><span class="l">Syukran / Jazākallāhu khairan</span><span class="m">Terima kasih / semoga Allah membalas kebaikan</span></div>
+      <div><span class="a">عَفْوًا / آسِفْ</span><span class="l">‘Afwan / Āsif</span><span class="m">Maaf / sama-sama (‘afwan), maaf (āsif)</span></div>
+      <div><span class="a">نَعَمْ / لَا</span><span class="l">Na‘am / Lā</span><span class="m">Ya / tidak</span></div>
+      <div><span class="a">مَا أَفْهَمْ</span><span class="l">Mā afham</span><span class="m">Saya tidak paham</span></div>
+      <div><span class="a">أَنَا مِنْ إِنْدُوْنِيْسِيَا</span><span class="l">Ana min Indūnīsiyā</span><span class="m">Saya dari Indonesia</span></div>
+      <div><span class="a">أَنَا ضَايِعْ / ضَايْعَةْ</span><span class="l">Ana ḍāyi‘ / ḍāy‘ah</span><span class="m">Saya tersesat (pria / wanita)</span></div>
+      <div><span class="a">سَاعِدْنِيْ</span><span class="l">Sā‘idnī</span><span class="m">Tolong bantu saya</span></div>
+      <div><span class="a">وَيْنْ بَابْ رَقَمْ …؟</span><span class="l">Wēn bāb raqam …?</span><span class="m">Di mana pintu nomor …?</span></div>
+      <div><span class="a">وَيْنْ الْحَمَّامْ؟</span><span class="l">Wēn al-ḥammām?</span><span class="m">Di mana toilet?</span></div>
+      <div><span class="a">وَيْنْ مَكَانْ الْوُضُوْءْ؟</span><span class="l">Wēn makān al-wuḍū'?</span><span class="m">Di mana tempat wudhu?</span></div>
+      <div><span class="a">وَيْنْ مُصَلَّى النِّسَاءْ؟</span><span class="l">Wēn muṣallān-nisā'?</span><span class="m">Di mana tempat sholat wanita?</span></div>
+      <div><span class="a">أَبْغَى أَرُوْحْ فُنْدُقْ …</span><span class="l">Abghā arūḥ funduq …</span><span class="m">Saya mau ke hotel … (sebut nama hotel, tunjukkan kartu hotel)</span></div>
+      <div><span class="a">أَنَا مَرِيْضْ / مَرِيْضَةْ</span><span class="l">Ana marīḍ / marīḍah</span><span class="m">Saya sakit (pria / wanita)</span></div>
+      <div><span class="a">أَبْغَى دُكْتُوْرْ / إِسْعَافْ</span><span class="l">Abghā duktūr / is‘āf</span><span class="m">Saya butuh dokter / ambulans</span></div>
+      <div><span class="a">بِكَمْ؟ / غَالِيْ</span><span class="l">Bikam? / Ghālī</span><span class="m">Berapa harganya? / mahal</span></div>
+      <div><span class="a">مُمْكِنْ أَقَلّْ؟</span><span class="l">Mumkin aqall?</span><span class="m">Bisa kurang?</span></div>
+      <div><span class="a">مَاءْ / مُوْيَةْ</span><span class="l">Mā' / Mūyah</span><span class="m">Air (baku / logat Saudi)</span></div>
+    </div>
+
+    <h3 class="sub-h">Tulisan di papan petunjuk</h3>
+    <div class="phr">
+      <div><span class="a">بَابْ</span><span class="l">Bāb</span><span class="m">Pintu / gate</span></div>
+      <div><span class="a">مَدْخَلْ / مَخْرَجْ</span><span class="l">Madkhal / Makhraj</span><span class="m">Masuk / keluar</span></div>
+      <div><span class="a">دَوْرَاتُ الْمِيَاهِ</span><span class="l">Daurātul-miyāh</span><span class="m">Toilet</span></div>
+      <div><span class="a">مُصَلَّى النِّسَاءِ</span><span class="l">Muṣallān-nisā'</span><span class="m">Tempat sholat wanita</span></div>
+      <div><span class="a">اَلْمَطَافُ / اَلْمَسْعَى</span><span class="l">Al-maṭāf / Al-mas‘ā</span><span class="m">Area tawaf / tempat sa'i</span></div>
+      <div><span class="a">مِصْعَدٌ / دَرَجٌ</span><span class="l">Miṣ‘ad / Daraj</span><span class="m">Lift / tangga</span></div>
+      <div><span class="a">اَلْمَفْقُوْدَاتُ</span><span class="l">Al-mafqūdāt</span><span class="m">Barang hilang (lost and found)</span></div>
+      <div><span class="a">إِسْعَافٌ / مَرْكَزٌ صِحِّيٌّ</span><span class="l">Is‘āf / Markaz ṣiḥḥī</span><span class="m">Pertolongan pertama / pusat kesehatan</span></div>
+    </div>
+
+    <h3 class="sub-h">Angka Arab (nomor pintu, harga)</h3>
+    <div class="digits">
+      <div><div class="a">٠</div><div class="n">0</div></div><div><div class="a">١</div><div class="n">1</div></div><div><div class="a">٢</div><div class="n">2</div></div><div><div class="a">٣</div><div class="n">3</div></div><div><div class="a">٤</div><div class="n">4</div></div><div><div class="a">٥</div><div class="n">5</div></div><div><div class="a">٦</div><div class="n">6</div></div><div><div class="a">٧</div><div class="n">7</div></div><div><div class="a">٨</div><div class="n">8</div></div><div><div class="a">٩</div><div class="n">9</div></div>
+    </div>
+    <p style="font-size:0.88rem;color:var(--muted)">Angka Arab ditulis dari kiri ke kanan seperti angka biasa. Contoh: ٧٩ = 79, ١٢٠ = 120.</p>
   </div>
 </section>
 
